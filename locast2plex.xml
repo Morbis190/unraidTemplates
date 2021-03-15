@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>locast2plex</Name>
+  <Repository>tgorg/locast2plex</Repository>
+  <Registry>https://hub.docker.com/r/tgorg/locast2plex/dockerfile</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://www.aftvnews.com/content/products/20190224/B07JQ3P98K.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1615768591</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6077</HostPort>
+        <ContainerPort>6077</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1900</HostPort>
+        <ContainerPort>1900</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/locast2plex/</HostDir>
+      <ContainerDir>/app/config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port 1" Target="6077" Default="" Mode="tcp" Description="Container Port: 6077" Type="Port" Display="always" Required="false" Mask="false">6077</Config>
+  <Config Name="Port 2" Target="1900" Default="" Mode="udp" Description="Container Port: 1900" Type="Port" Display="always" Required="false" Mask="false">1900</Config>
+  <Config Name="config" Target="/app/config/" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/locast2plex/</Config>
+</Container>
